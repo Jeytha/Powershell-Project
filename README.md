@@ -9,7 +9,7 @@ This repository provides a **turnkey host security automation** solution designe
 
 ## 📁 Repository Structure
 
-(Printable tree — copy/paste ready)
+
 ```text
 wonderville-security-automation/
 ├── README.md
@@ -23,7 +23,7 @@ wonderville-security-automation/
     └── deployment-notes.md
 ```
 
-*(If you want the tree as markdown code for a README, copy the `text` block above into your README.)*
+
 
 ---
 
@@ -42,7 +42,7 @@ wonderville-security-automation/
 
 ## 🧰 Prerequisites
 
-Copy/paste-ready code block:
+
 ```powershell
 # Prerequisites (run as Admin)
 # 1. Windows 10/11 or Windows Server 2016+
@@ -84,9 +84,9 @@ powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 
 ---
 
-## 🖥️ Scripts Overview (formatted table + the markdown table source in a box)
+## 🖥️ Scripts Overview 
 
-**Rendered table:**
+
 
 | Script                    | Purpose                                                    | Log Output                                             |
 |--------------------------:|-----------------------------------------------------------:|-------------------------------------------------------:|
@@ -95,7 +95,7 @@ powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 | `Configure-Firewall.ps1`  | Sets up baseline firewall rules (RDP, SMB, DNS, HTTP/S)    | `C:\Windows\System32\LogFiles\Firewall\pfirewall.log`  |
 | `deploy.ps1`              | Installs, enables logs, and schedules all scripts          | N/A                                                    |
 
-**Markdown source for the table (copy/paste):**
+
 ```markdown
 | Script                    | Purpose                                                    | Log Output                                             |
 |--------------------------:|-----------------------------------------------------------:|-------------------------------------------------------:|
@@ -144,7 +144,7 @@ $LookbackMinutes = 10
 
 ## ⏰ Scheduled Tasks (Auto-Created by `deploy.ps1`)
 
-**Rendered table:**
+
 
 | Task Name                | Interval           | Runs As | Script                                          |
 |-------------------------:|-------------------:|--------:|------------------------------------------------:|
@@ -152,7 +152,7 @@ $LookbackMinutes = 10
 | `WV-Monitor-PowerShell`  | Every 5 minutes    | SYSTEM  | `C:\Scripts\Monitor-PowerShell.ps1`             |
 | `WV-Configure-Firewall`  | Daily at 3:00 AM   | SYSTEM  | `C:\Scripts\Configure-Firewall.ps1`             |
 
-**Markdown source for the scheduled-tasks table:**
+
 ```markdown
 | Task Name                | Interval           | Runs As | Script                                          |
 |-------------------------:|-------------------:|--------:|------------------------------------------------:|
@@ -165,7 +165,7 @@ $LookbackMinutes = 10
 
 ## 📊 Log Locations
 
-**Rendered table:**
+
 
 | Log Type           | Path                                                         | Description                         |
 |-------------------:|--------------------------------------------------------------:|------------------------------------:|
@@ -173,7 +173,7 @@ $LookbackMinutes = 10
 | PowerShell Monitor  | `C:\Logs\PowerShellMonitor.log`                               | Suspicious PowerShell execution     |
 | Firewall Log        | `C:\Windows\System32\LogFiles\Firewall\pfirewall.log`         | Allowed / Blocked traffic           |
 
-**Markdown source for the logs table:**
+
 ```markdown
 | Log Type           | Path                                                         | Description                         |
 |-------------------:|--------------------------------------------------------------:|------------------------------------:|
@@ -234,7 +234,7 @@ Get-NetFirewallRule | Where DisplayName -Like "Block*" | Remove-NetFirewallRule 
 
 ## ⚡ Troubleshooting
 
-**Rendered table:**
+
 
 | Issue                                        | Fix |
 |---------------------------------------------:|-----|
@@ -243,7 +243,7 @@ Get-NetFirewallRule | Where DisplayName -Like "Block*" | Remove-NetFirewallRule 
 | 🔁 Too many alerts                            | Update `$ExpectedServices` or regex in scripts |
 | ❌ No PowerShell log events                   | Run `wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true` |
 
-**Markdown source for the troubleshooting table:**
+
 ```markdown
 | Issue                                        | Fix |
 |---------------------------------------------:|-----|
