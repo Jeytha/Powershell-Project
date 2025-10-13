@@ -11,9 +11,7 @@ This repository provides a **turnkey host security automation** solution designe
 
 
 ```text
-wonderville-security-automation/
-├── README.md
-├── LICENSE
+
 ├── scripts/
 │   ├── Monitor-Services.ps1
 │   ├── Monitor-PowerShell.ps1
