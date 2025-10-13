@@ -16,7 +16,7 @@ wonderville-security-automation/
 │ ├── Configure-Firewall.ps1
 │ └── deploy.ps1
 └── docs/
-└── deployment-notes.md
+    └── deployment-notes.md
 
 ---
 
