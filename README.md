@@ -263,15 +263,6 @@ Get-NetFirewallRule | Where DisplayName -Like "Block*" | Remove-NetFirewallRule 
 - Hardening: Add CIS Benchmark checks and GPO enforcement scripts
 ```
 
-**Sample `config.json` (optional):**
-```json
-{
-  "InternalSubnet": "192.168.90.0/24",
-  "LogPath": "C:\\Logs",
-  "ExpectedServices": ["WinDefend","EventLog","Dnscache","TermService"],
-  "MonitorIntervalMinutes": 5
-}
-```
 
 ---
 
