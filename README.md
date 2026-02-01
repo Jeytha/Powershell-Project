@@ -276,4 +276,6 @@ Get-NetFirewallRule | Where DisplayName -Like "Block*" | Remove-NetFirewallRule 
 
 ---
 
+## ❤️ Author
 
+Created by **Jeytha Sahana** 
