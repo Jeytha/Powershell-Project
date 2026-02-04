@@ -1,4 +1,4 @@
-# 🛡️ Host-Based Security Automation for a conceptualised case study
+#  Host-Based Security Automation for a conceptualised case study
 
 PowerShell-based automation for a small municipal network — built for the **Wonderville IT Internship Case Study**.  
 This repository provides a **turnkey host security automation** solution designed for small IT teams to deploy, monitor, and protect Windows-based systems.
@@ -7,7 +7,7 @@ This repository provides a **turnkey host security automation** solution designe
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 
 ```text
@@ -25,7 +25,7 @@ This repository provides a **turnkey host security automation** solution designe
 
 ---
 
-## ⚙️ Features
+##  Features
 
 ```
 - Automated Service & Process Monitoring
@@ -38,7 +38,7 @@ This repository provides a **turnkey host security automation** solution designe
 
 ---
 
-## 🧰 Prerequisites
+##  Prerequisites
 
 
 ```powershell
@@ -52,7 +52,7 @@ Set-ExecutionPolicy RemoteSigned -Force
 
 ---
 
-## 🚀 Quick Start (One-Step Deployment)
+##  Quick Start (One-Step Deployment)
 
 > Run all commands as **Administrator**
 
@@ -82,7 +82,7 @@ powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 
 ---
 
-## 🖥️ Scripts Overview 
+##  Scripts Overview 
 
 
 
@@ -105,7 +105,7 @@ powershell -ExecutionPolicy Bypass -File .\deploy.ps1
 
 ---
 
-## 🛠️ Configuration Parameters
+##  Configuration Parameters
 
 Each `.ps1` includes a config section at the top. Copy/paste these examples into your script headers and edit as needed.
 
@@ -140,7 +140,7 @@ $LookbackMinutes = 10
 
 ---
 
-## ⏰ Scheduled Tasks (Auto-Created by `deploy.ps1`)
+##  Scheduled Tasks (Auto-Created by `deploy.ps1`)
 
 
 
@@ -161,7 +161,7 @@ $LookbackMinutes = 10
 
 ---
 
-## 📊 Log Locations
+##  Log Locations
 
 
 
@@ -182,7 +182,7 @@ $LookbackMinutes = 10
 
 ---
 
-## 🧪 Testing the Scripts
+##  Testing the Scripts
 
 **Test Service Monitor (copy/paste):**
 ```powershell
@@ -207,7 +207,7 @@ Get-Content C:\Logs\PowerShellMonitor.log -Tail 20
 
 ---
 
-## 🧹 Uninstall / Rollback
+##  Uninstall / Rollback
 
 **Remove scheduled tasks (copy/paste):**
 ```powershell
@@ -230,30 +230,30 @@ Get-NetFirewallRule | Where DisplayName -Like "Block*" | Remove-NetFirewallRule 
 
 ---
 
-## ⚡ Troubleshooting
+##  Troubleshooting
 
 
 
 | Issue                                        | Fix |
 |---------------------------------------------:|-----|
-| ⚠️ “Execution of scripts is disabled”        | Run PowerShell with `-ExecutionPolicy Bypass` |
-| 🚫 “Access denied”                            | Run as Administrator |
-| 🔁 Too many alerts                            | Update `$ExpectedServices` or regex in scripts |
-| ❌ No PowerShell log events                   | Run `wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true` |
+|  “Execution of scripts is disabled”        | Run PowerShell with `-ExecutionPolicy Bypass` |
+|  “Access denied”                            | Run as Administrator |
+|  Too many alerts                            | Update `$ExpectedServices` or regex in scripts |
+|  No PowerShell log events                   | Run `wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true` |
 
 
 ```markdown
 | Issue                                        | Fix |
 |---------------------------------------------:|-----|
-| ⚠️ “Execution of scripts is disabled”        | Run PowerShell with `-ExecutionPolicy Bypass` |
-| 🚫 “Access denied”                            | Run as Administrator |
-| 🔁 Too many alerts                            | Update `$ExpectedServices` or regex in scripts |
-| ❌ No PowerShell log events                   | Run `wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true` |
+|  “Execution of scripts is disabled”        | Run PowerShell with `-ExecutionPolicy Bypass` |
+|  “Access denied”                            | Run as Administrator |
+|  Too many alerts                            | Update `$ExpectedServices` or regex in scripts |
+|  No PowerShell log events                   | Run `wevtutil set-log "Microsoft-Windows-PowerShell/Operational" /enabled:true` |
 ```
 
 ---
 
-## 🧩 Extend the Project
+##  Extend the Project
 
 ```
 - Centralized Logging: Forward logs to SIEM (Splunk, Sentinel, ELK)
